@@ -1,6 +1,8 @@
 .nb{
     background-color: #333;
-    padding : 1rem
+    padding : 1rem;
+    position: sticky;/* to enable the header to stick to the top*/
+    top: 10px;/* Adds a gap between the header and top, you can see the content thru it on scrolling*/
 }
 
 .nb ul{
@@ -33,4 +35,9 @@
     height: 100px;
     background-color: red;
     margin:5px;
+}
+
+.footer{
+    position: fixed;/* for footer to stick to bottom you cant use sticky, but use fixedposition with bottom:0 */
+    bottom: 0;
 }

@@ -1,19 +1,31 @@
 import React from 'react'
 import Navbar from './components/navbar';
-import Squares from './components/squares';
-
+import Footer from './components/Footer';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Login from './components/Login';
 
 const App = () =>{
   return (
     <div>
+      
+      <Router>
       <Navbar/>
-
-      <div className='content'>
-        <h1>Welcome!</h1>
-        <p>Your in homepage</p>
+      
+      <Routes>
+        <Route path='/login' Component={Login}/>
+        <Route path='/' exact Component={Home}/>
+        <Route path='/about' Component={About}/>
+        <Route path='/contact' Component={Contact}/>
+        </Routes>
+        
+      
+      <Footer/>
+      
+      </Router>
       </div>
-      <Squares/>
-    </div>
   )
 }
 
